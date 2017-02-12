@@ -7,7 +7,7 @@ Please be aware that your mileage my vary. I am definitely no Linux/Ubuntu exper
 **I take no responsibility for any damage or problems that arise as a result from following this guide.**
 
 # READ THIS FIRST
-Running Linux on a "hybrid" GPU (e.g. Nvidia Optimus) is a little trickier than without. It's important that understand the technology and what trade-offs you want to make by using Linux.
+Running Linux on a "hybrid" GPU (e.g. Nvidia Optimus) is a little trickier than without. It's important that you understand the technology and what trade-offs you want to make by using Linux.
 
 I highly recommend that you read the following before continuing:
 
