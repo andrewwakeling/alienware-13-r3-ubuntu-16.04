@@ -2,16 +2,16 @@
 
 This is guide where I have dumped my personal steps to getting Ubuntu 16.04 running smoothly with my Alienware 13 R3 (Early 2017 with Kaby Lake) with OLED.
 
-Please be aware that your mileage my vary. I am definitely no Linux/Ubuntu expert. Feedback is most welcome. Please raise an issue!
+Please be aware that your mileage my vary. I am definitely no Linux/Ubuntu expert. If you have any feedback, please raise an issue!
 
 **I take no responsibility for any damage or problems that arise as a result from following this guide.**
 
 # READ THIS FIRST
-Running Linux on a "hybrid" GPU (e.g. Nvidia Optimus) is a little bit more tricky. It's important that you spend a little time understanding what this is about and what trade-offs you want to make.
+Running Linux on a "hybrid" GPU (e.g. Nvidia Optimus) is a little trickier than without. It's important that understand the technology and what trade-offs you want to make by using Linux.
 
 I highly recommend that you read the following before continuing:
 
-* [Dell's KnowledgeBase article on Nvidia Optimus and Ubuntu](http://www.dell.com/support/Article/au/en/aubsdt1/SLN298431/EN)
+* [Dell's Knowledge Base article on Nvidia Optimus and Ubuntu](http://www.dell.com/support/Article/au/en/aubsdt1/SLN298431/EN)
 * [A great summary of Nvidia Optimus (from one of the bumblebee devs)](http://askubuntu.com/questions/766745/do-i-need-to-install-bumblebee-for-hybrid-graphics-system-to-enable-optimus-on-u/775161)
 
 This guide will result in **primarily using the integrated GPU (intel)** with the option of invoking the discrete (NVIDIA GTX 1060) card via bumblebee.
@@ -22,19 +22,19 @@ My reasoning was:
 * primarily do my gaming in Windows
 * currently the most stable configuration that I've been able to achieve
 
-**Please be aware that `sudo prime-select nvidia` will not work if you follow the steps in this guide.**
+Please be aware that running permanently on the discrete GPU via `sudo prime-select nvidia` **will not work** if you follow the steps in this guide.
 
 # Preparation
 
 ## BIOS
 Turn off `Secure Boot` in the BIOS. This will make it easier to install several 3rd party drivers.
 
-I recommend leaving `UEFI` on. Be aware that to get entries in your bios, you will probably need to manually add the appropriate *.efi file.
+I recommend leaving `UEFI` on. Be aware that to get entries in your bios, you will need to manually add a new entry and select the appropriate *.efi file.
 
 I believe that you need to switch the SATA interface from `RAID` to `AHCI` before you're able to install Ubuntu.
 (I couldn't get the Ubuntu installer to detect the drive when using RAID but maybe this could be resolved with extra drivers). 
 
-**WARNING: Switching the SATA interface will cause Windows to BSOD.**
+**WARNING: If Windows was installed with `RAID`, switching the SATA interface to `AHCI` will cause Windows to BSOD.**
 
 ## Dual-boot with Windows
 I want to make this very clear. If Windows is installed with your SATA interface set to `RAID`, **the easiest way to get dual-booting working is to re-install Windows.**
@@ -60,7 +60,7 @@ I had an intermittent issue where Wifi wouldn't always come back after suspendin
 ## Ubuntu installer
 Install Ubuntu 16.04 from the bootable USB.
 
-## Disable screen turn-off
+## Disable the screensaver
 Go into `System Settings...`. In `Brightness & Lock`, change `Turn off screen when inactive for:` to `Never`.
 
 Otherwise you will crash when trying to turn the screen back on.
