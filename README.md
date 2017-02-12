@@ -1,7 +1,9 @@
 # alienware-13-r3-ubuntu-16.04
 
-This is guide where I have dumped my personal steps to getting Ubuntu 16.04 running smoothly with my Alienware 13 R3.
+This is guide where I have dumped my personal steps to getting Ubuntu 16.04 running smoothly with my Alienware 13 R3 (Early 2017 with Kaby Lake) with OLED.
 
+
+My personal reasons are:
 Please be aware that your mileage my vary. I am definitely no Linux/Ubuntu expert. Feedback is most welcome. Please raise an issue!
 
 **I take no responsibility for any damage or problems that arise as a result from following this guide.**
@@ -14,16 +16,14 @@ I highly recommend that you read the following before continuing:
 * [Dell's KnowledgeBase article on Nvidia Optimus and Ubuntu](http://www.dell.com/support/Article/au/en/aubsdt1/SLN298431/EN)
 * [A great summary of Nvidia Optimus (from one of the bumblebee devs)](http://askubuntu.com/questions/766745/do-i-need-to-install-bumblebee-for-hybrid-graphics-system-to-enable-optimus-on-u/775161)
 
-**This guide will result in primarily using the integrated GPU (intel) with the option of invoking the discrete (NVIDIA GTX 1060) card via bumblebee.**
-
-My personal reasons are:
+This guide will result in **primarily using the integrated GPU (intel)** with the option of invoking the discrete (NVIDIA GTX 1060) card via bumblebee.
 
 * get the most out of the 76 watt-hour-battery by using the integrated GPU as much as possible
-* able to explicitly leverage the discrete (NVIDIA) GPU with applications such as Blender
+* able to be explicit about when I want to use the discrete GPU (e.g. When I'm using Blender)
 * primarily do my gaming in Windows
 * currently the most stable configuration that I've been able to achieve
 
-**Please be aware that `sudo prime-select nvidia` will not work as expected with this guide.** 
+**Please be aware that `sudo prime-select nvidia` will not work if you follow the steps in this guide.**
 
 # Preparation
 
@@ -38,17 +38,17 @@ I believe that you need to switch the SATA interface from `RAID` to `AHCI` befor
 **WARNING: Switching the SATA interface will cause Windows to BSOD.**
 
 ## Dual-boot with Windows
-I want to make this clear. **The easiest way to get dual-booting working is to re-install Windows.**
+I want to make this very clear. If Windows is installed with your SATA interface set to `RAID`, **the easiest way to get dual-booting working is to re-install Windows.**
 
-Be very wary of guides that claim that continue to get Windows after switching the SATA interface to `ACHI`. You can very easily stop Windows booting properly. Even with recovery points, don't expect this is easy to undo.  
+Be very wary of guides that claim they can keep Windows running, even after switching the SATA interface from `RAID` to `ACHI`. You can very easily stop Windows booting properly. Even with recovery points, don't expect this to be easy to undo.  
 
-I highly recommend that you backup everything and prepare to reinstall Windows 10 from scratch.
+I highly recommend that you backup everything and prepare to reinstall Windows 10.
  
 Installing Windows 10 is easy. Simply create a bootable USB using the Windows 10 Media Creation Tool.
 
-You won't need a product key. (I believe this is stored on the machine somehow, perhaps in BIOS.)
+**You shouldn't need a product key** as it should be embedded in the BIOS.
 
-Install Windows first. Get the drivers from Dell's website and get it all working. If necessary, shrink the partition to make room for Ubuntu.
+**Install Windows before installing Ubuntu.** Get the [drivers from Dell's website](www.dell.com/support/home/us/en/4/product-support/product/alienware-13/drivers) and get it all working. If necessary, [shrink the partition](https://www.google.com.au/search?q=shrink+partition+windows+10) to make room for Ubuntu.
    
 ## Ubuntu installer
 Creating a bootable USB Ubuntu installer can be done using Rufus, using [these instructions](https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows).
@@ -59,7 +59,7 @@ I had an intermittent issue where Wifi wouldn't always come back after suspendin
 # Instructions
 
 ## Ubuntu installer
-Install Ubuntu using the installer.
+Install Ubuntu 16.04 from the bootable USB.
 
 ## Disable screen turn-off
 Go into `System Settings...`. In `Brightness & Lock`, change `Turn off screen when inactive for:` to `Never`.
@@ -78,13 +78,13 @@ sudo apt update
 sudo apt install nvidia-367 nvidia-prime
 ````
 
+I can't confirm if a newer version works, but 367 worked for me.
+
 ## Indicate that you want to primarily use the integrated graphics card
 
 ````
 sudo prime-select intel
 ````
-
-I can't confirm if a newer version works, but 367 worked for me.
 
 ## Do a general update/upgrade
 
