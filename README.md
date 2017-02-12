@@ -7,9 +7,9 @@ Please be aware that your mileage my vary. I am definitely no Linux/Ubuntu exper
 **I take no responsibility for any damage or problems that arise as a result from following this guide.**
 
 # READ THIS FIRST
-Running Linux on "hybrid" (Nvidia Optimus) is a little bit more tricky. It's important that you spend a little time understanding what this is about and what trade-offs you want to make.
+Running Linux on a "hybrid" GPU (e.g. Nvidia Optimus) is a little bit more tricky. It's important that you spend a little time understanding what this is about and what trade-offs you want to make.
 
-I highly recommend that you take read the following before continuing:
+I highly recommend that you read the following before continuing:
 
 * [Dell's KnowledgeBase article on Nvidia Optimus and Ubuntu](http://www.dell.com/support/Article/au/en/aubsdt1/SLN298431/EN)
 * [A great summary of Nvidia Optimus (from one of the bumblebee devs)](http://askubuntu.com/questions/766745/do-i-need-to-install-bumblebee-for-hybrid-graphics-system-to-enable-optimus-on-u/775161)
