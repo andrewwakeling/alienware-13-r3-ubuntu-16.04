@@ -64,10 +64,10 @@ Install Ubuntu using the installer.
 ## Disable screen turn-off
 Go into `System Settings...`. In `Brightness & Lock`, change `Turn off screen when inactive for:` to `Never`.
 
+Otherwise you will crash when trying to turn the screen back on.
+
 ## Fix the DPI
 Go into `System Settings...` again. In `Screen Display`, change `Scale for menu and title bars:` to `1.5`.
-
-Otherwise you will crash when trying to turn the screen back on.
  
 ## Install Nvidia 367
 
@@ -203,7 +203,7 @@ sudo apt install nvidia-power-indicator
 # Other tips
 
 ## Fix lag when resizing windows
-Follow this guide. Personally, instead of `outline`, I selected `rectangle`.
+Follow [this guide](http://www.howtogeek.com/101006/how-to-tweak-unity-on-ubuntu-with-the-compizconfig-settings-manager/). Personally, instead of `outline`, I selected `rectangle`.
 
 ## Fix flickering in Chrome
 When the window is maximized and you scroll, you can sometimes see flicker.
