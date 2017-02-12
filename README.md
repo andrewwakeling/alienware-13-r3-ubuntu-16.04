@@ -2,8 +2,6 @@
 
 This is guide where I have dumped my personal steps to getting Ubuntu 16.04 running smoothly with my Alienware 13 R3 (Early 2017 with Kaby Lake) with OLED.
 
-
-My personal reasons are:
 Please be aware that your mileage my vary. I am definitely no Linux/Ubuntu expert. Feedback is most welcome. Please raise an issue!
 
 **I take no responsibility for any damage or problems that arise as a result from following this guide.**
@@ -18,6 +16,7 @@ I highly recommend that you read the following before continuing:
 
 This guide will result in **primarily using the integrated GPU (intel)** with the option of invoking the discrete (NVIDIA GTX 1060) card via bumblebee.
 
+My reasoning was:
 * get the most out of the 76 watt-hour-battery by using the integrated GPU as much as possible
 * able to be explicit about when I want to use the discrete GPU (e.g. When I'm using Blender)
 * primarily do my gaming in Windows
