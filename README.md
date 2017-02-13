@@ -53,8 +53,7 @@ Installing Windows 10 is easy. Simply create a bootable USB using the Windows 10
 Creating a bootable USB Ubuntu installer can be done using Rufus, using [these instructions](https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows).
 
 ## Wifi not working after suspending in Ubuntu
-I had an intermittent issue where Wifi wouldn't always come back after suspending. If you hit this problem, [this solution](http://askubuntu.com/questions/564556/cant-connect-to-wifi-after-suspend) seemed to fix it for me.
-
+I had an intermittent issue where Wifi wouldn't always come back after suspending. I'm yet to resolve this, but running `sudo service network-manager restart` resolves the problem.
 # Instructions
 
 ## Ubuntu installer
