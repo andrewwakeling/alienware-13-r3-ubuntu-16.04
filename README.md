@@ -36,19 +36,18 @@ I believe that you need to switch the SATA interface from `RAID` to `AHCI` befor
 
 **WARNING: If Windows was installed with `RAID`, switching the SATA interface to `AHCI` will cause Windows to BSOD.**
 
+Be very wary of some guides that give instruction on to continue using Windows even after switching to `ACHI`. You can very easily stop Windows booting properly. Even with recovery points, don't expect this to be easy to undo. I highly recommend that you backup any important data.
+
+[trunet](https://github.com/trunet) has advised me that [this solution works](https://gist.github.com/Sjeanpierre/81ce440458b6c46c5608).
+
+
 ## Dual-boot with Windows
-I want to make this very clear. If Windows is installed with your SATA interface set to `RAID`, **the easiest way to get dual-booting working is to re-install Windows.**
-
-Be very wary of guides that claim they can keep Windows running, even after switching the SATA interface from `RAID` to `ACHI`. You can very easily stop Windows booting properly. Even with recovery points, don't expect this to be easy to undo.  
-
-I highly recommend that you backup everything and prepare to reinstall Windows 10.
- 
-Installing Windows 10 is easy. Simply create a bootable USB using the Windows 10 Media Creation Tool.
-
-**You shouldn't need a product key** as it should be embedded in the BIOS.
-
-**Install Windows before installing Ubuntu.** Get the [drivers from Dell's website](www.dell.com/support/home/us/en/4/product-support/product/alienware-13/drivers) and get it all working. If necessary, [shrink the partition](https://www.google.com.au/search?q=shrink+partition+windows+10) to make room for Ubuntu.
+It is recommended that you have Windows 10 installed first.
+If you need to reinstall, **you shouldn't need a product key** as it should be embedded in the BIOS.
+If necessary, [shrink the partition](https://www.google.com.au/search?q=shrink+partition+windows+10) to make room for Ubuntu.
    
+Installing Windows 10 is easy. Simply create a bootable USB using the Windows 10 Media Creation Tool. Get the [drivers from Dell's website](www.dell.com/support/home/us/en/4/product-support/product/alienware-13/drivers) and get it all working. 
+
 ## Ubuntu installer
 Creating a bootable USB Ubuntu installer can be done using Rufus, using [these instructions](https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows).
 
