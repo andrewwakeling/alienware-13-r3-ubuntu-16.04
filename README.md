@@ -61,7 +61,7 @@ Install Ubuntu 16.04 from the bootable USB.
 ## Disable the screensaver
 Go into `System Settings...`. In `Brightness & Lock`, change `Turn off screen when inactive for:` to `Never`.
 
-Otherwise you will crash when trying to turn the screen back on.
+Otherwise your screen may get stuck on a black screen (but the system is still responsive).
 
 ## Fix the DPI
 Go into `System Settings...` again. In `Screen Display`, change `Scale for menu and title bars:` to `1.5`.
@@ -75,7 +75,9 @@ sudo apt update
 sudo apt install nvidia-367 nvidia-prime
 ````
 
-I can't confirm if a newer version works, but 367 worked for me.
+~~I can't confirm if a newer version works, but 367 worked for me.~~
+
+Edit: I'm actually using the 378.09 drivers now, but upgraded after following these steps.
 
 ## Indicate that you want to primarily use the integrated graphics card
 
@@ -219,5 +221,23 @@ Personally, I just use a script that executes the following:
 xrandr --output eDP1 --brightness 0.35
 ````
 
+Note: Try the script a few times if it doesn't work at first.
 
+# Unresolved
+
+## "Turn screen off when inactive for" option not reliably resuming
+
+I'm intermittently ending up with a permanent black screen when trying to resume using the computer.
+
+I initially thought this was causing the computer to freeze/crash, but ssh sessions from another machine were still responsive.
+
+The following script (even run via an external ssh session) seems to fix the problem:
+
+````
+xrandr -d :0.0 --output eDP1 --off && xrandr -d :0.0 --output eDP1 --auto
+````
+
+Note: Try the script a few times if it doesn't work at first.
+ 
+ 
 
