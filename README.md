@@ -225,7 +225,7 @@ Note: Try the script a few times if it doesn't work at first.
 
 # Unresolved
 
-## "Turn screen off when inactive for" option not reliably resuming
+### "Turn screen off when inactive for" option not reliably resuming
 
 I'm intermittently ending up with a permanent black screen when trying to resume using the computer.
 
@@ -238,6 +238,22 @@ xrandr -d :0.0 --output eDP1 --off && xrandr -d :0.0 --output eDP1 --auto
 ````
 
 Note: Try the script a few times if it doesn't work at first.
+
+### Tearing while watching videos.
+
+This [solution](http://askubuntu.com/questions/667466/screen-tearing-in-ubuntu-with-nvidia-intel-graphics) seemed to work for me.
+
+Create `/usr/share/X11/xorg.conf.d/20-intel.conf` and add the following contents:
+
+````
+Section "Device"
+   Identifier  "Intel Graphics"
+   Driver      "intel"
+   Option      "TearFree"    "true"
+EndSection
+````
+
+Log out and back in to see changes.
  
  
 
