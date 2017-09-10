@@ -46,7 +46,7 @@ It is recommended that you have Windows 10 installed first.
 If you need to reinstall, **you shouldn't need a product key** as it should be embedded in the BIOS.
 If necessary, [shrink the partition](https://www.google.com.au/search?q=shrink+partition+windows+10) to make room for Ubuntu.
    
-Installing Windows 10 is easy. Simply create a bootable USB using the Windows 10 Media Creation Tool. Get the [drivers from Dell's website](www.dell.com/support/home/us/en/4/product-support/product/alienware-13/drivers) and get it all working. 
+Installing Windows 10 is easy. Simply create a bootable USB using the Windows 10 Media Creation Tool. Get the [drivers from Dell's website](http://www.dell.com/support/home/us/en/4/product-support/product/alienware-13/drivers) and get it all working. 
 
 ## Ubuntu installer
 Creating a bootable USB Ubuntu installer can be done using Rufus, using [these instructions](https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows).
